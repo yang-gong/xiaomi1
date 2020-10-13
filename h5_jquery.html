@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red-box {
+            width: 300px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="id01" class="red-box" >1</div>
+    <div id="id02">
+        <ul>
+            <li><a href=""><span>11</span><i></i></a></li>
+            <li><a href=""><span>22</span><i></i></a></li>
+            <li><a href=""><span>12</span><i></i></a></li>
+            <li><a href=""><span>33</span><i></i></a></li>
+            <li><a href=""><span>44</span><i></i></a></li>
+        </ul>
+        <ul>
+            <li><a href=""><span>111</span><i></i></a></li>
+            <li><a href=""><span>222</span><i></i></a></li>
+            <li><a href=""><span>333</span><i></i></a></li>
+            <li><a href=""><span>444</span><i></i></a></li>
+        </ul>
+        <ul>
+            <li><a href=""><span>111</span><i></i></a></li>
+            <li><a href=""><span>222</span><i></i></a></li>
+            <li><a href=""><span>333</span><i></i></a></li>
+            <li><a href=""><span>444</span><i></i></a></li>
+        </ul>
+    </div>
+    <input type="text" value="123" />
+    <script>
+        // document.getElementById("id01").innerHTML="hello";
+        // $("#id02").html("hello");
+        // $("#id02").html("word");
+        // document.getElementById("id01").style.display='none';
+        // $("#id02").hide();
+
+        //链式调用,jquery的很多方法返回结果任然是jqyery对象可以继续调用方法
+        //$("#id02").html("hello").hide().show();
+
+        //隐式迭代, 选出多个元素会帮我们做循环处理
+        //$("div").hide();
+   
+        //选择器
+        // console.log("--------后代选择器-----------")
+        // console.log($("ul li a"))
+        // console.log($("ul a"))
+        // console.log("---------子元素选择器----------")
+        // console.log($("ul>li"))
+        // console.log($("ul>a"))
+        // console.log($("div,ul,span"))
+        // console.log($("li:gt(3)"))
+
+        //属性修改
+        //document.getElementById("id01").id="";
+        // document.getElementById("id01").title="我是提示内容";
+        // document.getElementById("id01").className="";
+        //$("#id01").attr("id","id001").attr("title","我是提示内容1").attr("class","red-box")
+        //console.log($("#id01").attr("id"));
+
+        //添加和移除样式
+        // $("#id01").addClass("red-box").removeClass("cl01");
+        // //移除属性
+        // $("#id01").removeAttr("id").removeAttr("class");
+
+        // console.log($(":input").val())
+        // $(":input").val(456)
+
+        //修改css样式
+        // $("#id01").css({
+        // "color":"white",
+        // "background-color":"#98bf21",
+        // "font-family":"Arial",
+        // "font-size":"20px",
+        // "padding":"5px"
+        // });
+        // //获取css属性的值
+        // console.log($("#id01").css("color"));
+        // //获取元素属性的值
+        // console.log($("#id01").attr("style"));
+
+        // //插入元素
+        // $("#id01").append("<span></span>")
+        // //移除元素
+        // $("#id01").remove();
+        // $("span").remove();
+
+        //动画
+        //$("#id01").animate({background:"#98bf21"},2000);
+        //$("#id01").fadeOut(2000).fadeIn(2000);
+
+        // $("#id01").slideUp(20000).slideDown(20000,function(){
+        //     alert(0)
+        // });
+
+        // $("#id01").slideToggle(2000).slideToggle(2000).slideToggle(2000)
+        // $("#id01").hide().show();
+
+        //获取子元素
+        // console.log("--------获取子元素-----------")
+        // console.log($("#id02").children())
+        // console.log($("#id02").children("ul"))
+        // console.log($("#id02").children("li"))
+        // console.log("--------获取子孙元素-----------")
+        // console.log($("#id02").find())
+        // console.log($("#id02").find("ul"))
+        // console.log($("#id02").find("a"))
+        // console.log($("#id02").find("ul li a"))
+        // console.log("--------获取父元素-----------")
+        // console.log($("#li01").parent())
+        // console.log($("#li01").parent("ul"))
+        // console.log($("#li01").parent("div"))
+        // console.log("--------获取祖先元素-----------")
+        // console.log($("#li01").parents())
+        // console.log($("#li01").parents("ul"))
+        // console.log($("#li01").parents("div"))
+        // console.log("--------获取兄弟元素-----------")
+        // console.log($("#li01").prev())
+        // console.log($("#li01").prevAll())
+        // console.log($("#li01").next())
+        // console.log($("#li01").nextAll())
+        // //each迭代
+        // $("li").each(function(i){
+        //     console.log(i)
+        //     console.log($(this).text())
+        // })
+
+        //事件
+        // $("ul").click(function(){
+        //     $(this).hide();
+        // });
+
+        // var c=$("#li01").attr("class");
+    </script>
+</body>
+
+</html>
