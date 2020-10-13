@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="id02">
+        <ul>
+            <li><a href=""><span>1</span><i>22</i></a></li>
+            <li><a href=""><span>2</span><i>33</i></a></li>
+            <li><a href=""><span>3</span><i>44</i></a></li>
+            <li><a href=""><span>4</span><i>55</i></a></li>
+        </ul>
+        <ul>
+            <li><a href=""><span>11</span><i></i></a></li>
+            <li><a href=""><span>22</span><i></i></a></li>
+            <li><a href=""><span>33</span><i></i></a></li>
+            <li><a href=""><span>44</span><i></i></a></li>
+        </ul>
+        <ul>
+            <li><a href=""><span>111</span><i></i></a></li>
+            <li><a href=""><span>222</span><i></i></a></li>
+            <li><a href=""><span>333</span><i></i></a></li>
+            <li><a href=""><span>444</span><i></i></a></li>
+        </ul>
+    </div>
+
+    <script>
+     var div_node = document.getElementById("id02");
+        var ul_node = div_node.childNodes;
+        for (let j = 0; j < ul_node.length; j++) {
+            var li_node = ul_node[j].childNodes;
+            if (li_node.length > 0) {
+                for (let k = 0; k < li_node.length; k++) {
+                    var a_node = li_node[k].childNodes;
+                    if (a_node.length > 0) {
+                        for (let d = 0; d < a_node.length; d++) {
+                            var span_node = a_node[d].childNodes;
+                            a_node[d].removeChild(span_node[0]);
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
