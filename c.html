@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电梯导航</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .w{
+            width: 1100px;
+            margin: 0 auto;
+        }
+        .title{
+            color: #F78F26;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .box{
+            height: 500px;
+            background-color: azure;
+        }
+        ul{
+            list-style: none;
+            position: fixed;
+            top: 30%;
+            right: 5px;
+        }
+        .nav>li{
+            background-color: #F78F26;
+            width: 40px;
+            height: 40px;
+            margin: 1px;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="w">
+        <div class="title">手机</div>
+        <div class="box"></div>
+        <div class="title">电视</div>
+        <div class="box"></div>
+        <div class="title">电脑</div>
+        <div class="box"></div>
+        <div class="title">冰箱</div>
+        <div class="box"></div>
+        <div class="title">空调</div>
+        <div class="box"></div>
+        <div id="qita" class="title">其他</div>
+        <div class="box"></div>
+    </div>
+    <ul class="nav">
+        <li>手机</li>
+        <li>电视</li>
+        <li>电脑</li>
+        <li>冰箱</li>
+        <li>空调</li>
+        <li>其他</li>
+    </ul>
+    <script>
+        $(".nav>li").click(function(){
+            var thisIdex=$(this).index();
+            var top=$(".w .title").eq(thisIdex).offset().top;
+            $("html,body").animate({
+                scrollTop:top
+            })
+        })
+        
+    </script>
+</body>
+</html>

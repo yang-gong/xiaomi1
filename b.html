@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下拉</title>
+    <script src="./js/jquery.min.js"></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: red;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            height: 70px;
+        }
+
+        .nav>li {
+            float: left;
+            width: 50px;
+        }
+
+        .nav ul {
+            border: olivedrab 1px solid;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="nav">
+        <li>
+            <a href="">首页</a>
+            <ul>
+                <li><a href=""></a>首页1</li>
+                <li><a href=""></a>首页2</li>
+                <li><a href=""></a>首页3</li>
+            </ul>
+        </li>
+        <li>
+            <a href="">手机</a>
+            <ul>
+                <li><a href=""></a>手机1</li>
+                <li><a href=""></a>手机2</li>
+                <li><a href=""></a>手机3</li>
+            </ul>
+        </li>
+        <li>
+            <a href="">电脑</a>
+            <ul>
+                <li><a href=""></a>电脑1</li>
+                <li><a href=""></a>电脑2</li>
+                <li><a href=""></a>电脑3</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+
+        $("a").mouseover(function () {
+            $(this).next().show();
+        });
+        $("a").mouseout(function () {
+            $(this).next().hide();
+        });
+
+
+    </script>
+
+</body>
+
+</html>
